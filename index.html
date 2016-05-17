@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Bored Today</title>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/async/dist/async.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/activity_controller.js"></script>
+    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body ng-app="app">
+	<div id="header">
+        <p class="header_text"> Are you bored today?</p>
+    </div>
+    <div ng-controller="TestController">
+        <div ng-repeat="activity in activities">
+            <div class="activity">
+                <div class="activity_header">
+                    <span>{{activity.title}}</span> <span ng-show="activity.created_by">, created by {{activity.created_by}}</span>
+                </div>
+                <div class="activity_pic">
+                    <img ng-src="{{imageMap[activity.type]}}" class="activity_pic">
+                </div>
+                <div class="activity_details">
+                    {{activity.registered}} registered, need {{activity.required}} more
+                </div>
+                <div class="activity_buttons">
+                    <button ng-click="myFunction()">Do it now</button>
+                    <button onclick="myFunction()">Schedule for later</button>
+                    <a href="index.html">moar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div id="content">
+        <div class="activity">
+            <div class="activity_header">
+                Some activity, created by Zork
+            </div>
+            <div class="activity_pic">
+                <img src="images/climbing.jpeg" class=activity_pic>
+            </div>
+            <div class="activity_details">
+                1 registered, need 1 more
+            </div>
+            <div class="activity_buttons">
+                <button onclick="myFunction()">Do it now</button>
+                <button onclick="myFunction()">Schedule for later</button>
+                <a href="index.html">moar</a>
+            </div>
+        </div>
+        <div class="activity">
+            <div class="activity_header">
+                Some other activity, created by Querty
+            </div>
+            <div class="activity_pic">
+                <img src="./images/lunch.jpeg" class=activity_pic>
+            </div>
+            <div class="activity_buttons">
+                <button onclick="myFunction()">Join</button>
+                <button onclick="myFunction()">Propose another time</button>
+            </div>
+            <div class="activity_details">
+                2 joined, need 1 or 2 more -->
+                <!-- more details: list of who joined, where, when, total participants, alternative location, map, route,
+				 photos, how to identify participants, age limit, items to bring, required skills,
+				 distance to location [km/mi], time by foot, by car, by bicycle, etc. -->
+     <!--        </div>
+        </div>
+      -->   <!-- 		<div class="activity">
+			Yet another activity
+		</div>
+		<div class="activity">
+			Yet another activity
+		</div>
+		<div class="activity">
+			Yet another activity
+		</div>
+		<div class="activity">
+			Yet another activity
+		</div>
+	</div> -->
+</body>
+
+</html>

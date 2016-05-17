@@ -1,0 +1,59 @@
+body {
+	margin: 0;
+}
+
+#header {
+	width:100%;
+	height:48px;
+	/*border:1px solid blue;*/
+	background-color: #eee;
+	text-align: center;
+	padding: 0px;
+}
+
+#content {
+	width:1024px;
+	height:100%;
+	border: 1px solid #ccc;
+	margin: auto;
+	padding:20px 20px;
+}
+
+.header_text {
+	font-size: 36px;
+}
+
+.activity {
+	width: 326px;
+	height: 200px;
+	border: 1px solid black;
+	float:left;
+	margin-right: 16px;
+	margin-bottom: 20px;
+}
+
+.activity_header {
+	background-color: #5d5;
+}
+
+.activity_pic {
+	height: 145px;
+	text-align: center;
+}
+
+.activity_buttons {
+	background-color: #77b;
+}
+
+.activity_details {
+	background-color: #7bb;
+}
+
+.activity:nth-child(3n+3) {  
+  /*border: 1px solid red;*/
+  margin-right: 0;
+}
+
+.activity:nth-child(2n+0) {  
+  border: 1px dashed green;
+}
